@@ -1,0 +1,19 @@
+--------------------------------------
+1. redesign forms
+2. join 2-3 database table in 1 datagrid view:
+	*tbl_movie & tbl_movieRentalInfo
+	*tbl_customer, tbl_movies & tbl_rentMovie
+3. add 2 datagrid views and bind to textboxes in frmRentMovie
+	*tbl_customer
+	*tbl_movies
+4. make app.config work
+5. make all stored procedures work
+6. validate and filter all textboxes
+7. make all search buttons work
+8. make log-in form work
+9. fix all datagrid views
+10. add 1 datagrid view and bind to textboxes in frmAddMovieRentalInfo
+	*tbl_movies
+11. make uplaod image work
+12. edit tbl_movies or make new database table for uploaded image path string
+		

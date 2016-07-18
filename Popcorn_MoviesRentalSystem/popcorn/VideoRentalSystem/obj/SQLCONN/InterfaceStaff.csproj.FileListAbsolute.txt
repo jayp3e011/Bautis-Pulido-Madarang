@@ -1,0 +1,14 @@
+C:\Users\Administrator\Desktop\StaffV2\VideoRentalSystem\bin\SQLCONN\VideoRentalSystem.exe.config
+C:\Users\Administrator\Desktop\StaffV2\VideoRentalSystem\bin\SQLCONN\VideoRentalSystem.exe
+C:\Users\Administrator\Desktop\StaffV2\VideoRentalSystem\obj\SQLCONN\InterfaceStaff.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\StaffV2\VideoRentalSystem\obj\SQLCONN\VideoRentalSystem.frmAddMovie.resources
+C:\Users\Administrator\Desktop\StaffV2\VideoRentalSystem\obj\SQLCONN\VideoRentalSystem.frmAddMovieRentalInfo.resources
+C:\Users\Administrator\Desktop\StaffV2\VideoRentalSystem\obj\SQLCONN\VideoRentalSystem.frmMain.resources
+C:\Users\Administrator\Desktop\StaffV2\VideoRentalSystem\obj\SQLCONN\VideoRentalSystem.frmMovie.resources
+C:\Users\Administrator\Desktop\StaffV2\VideoRentalSystem\obj\SQLCONN\VideoRentalSystem.frmRentMovie.resources
+C:\Users\Administrator\Desktop\StaffV2\VideoRentalSystem\obj\SQLCONN\VideoRentalSystem.frmLogin.resources
+C:\Users\Administrator\Desktop\StaffV2\VideoRentalSystem\obj\SQLCONN\VideoRentalSystem.frmSplash.resources
+C:\Users\Administrator\Desktop\StaffV2\VideoRentalSystem\obj\SQLCONN\VideoRentalSystem.Properties.Resources.resources
+C:\Users\Administrator\Desktop\StaffV2\VideoRentalSystem\obj\SQLCONN\InterfaceStaff.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\StaffV2\VideoRentalSystem\obj\SQLCONN\VideoRentalSystem.exe
+C:\Users\Administrator\Desktop\StaffV2\VideoRentalSystem\obj\SQLCONN\VideoRentalSystem.frmAddCustomer.resources
