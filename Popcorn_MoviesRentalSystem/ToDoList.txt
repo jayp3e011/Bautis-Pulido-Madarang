@@ -16,4 +16,5 @@
 	*tbl_movies
 11. make uplaod image work
 12. edit tbl_movies or make new database table for uploaded image path string
+13. make ogin form work
 		

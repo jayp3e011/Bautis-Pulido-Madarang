@@ -31,6 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRentInfo));
             this.tblRentalInfo = new System.Windows.Forms.DataGridView();
+            this.movieidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inforentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inforentDaysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inforentFeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.infopenaltyFeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.infostatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblmovieRentalInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.db_videoRentalDataSet6 = new VideoRentalSystem.db_videoRentalDataSet6();
             this.topNavi = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -46,22 +54,81 @@
             this.statBar = new System.Windows.Forms.StatusStrip();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.tbl_movieRentalInfoTableAdapter = new VideoRentalSystem.db_videoRentalDataSet6TableAdapters.tbl_movieRentalInfoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tblRentalInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblmovieRentalInfoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_videoRentalDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.topNavi)).BeginInit();
             this.topNavi.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblRentalInfo
             // 
+            this.tblRentalInfo.AutoGenerateColumns = false;
             this.tblRentalInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblRentalInfo.Location = new System.Drawing.Point(35, 81);
+            this.tblRentalInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.movieidDataGridViewTextBoxColumn,
+            this.inforentTypeDataGridViewTextBoxColumn,
+            this.inforentDaysDataGridViewTextBoxColumn,
+            this.inforentFeeDataGridViewTextBoxColumn,
+            this.infopenaltyFeeDataGridViewTextBoxColumn,
+            this.infostatusDataGridViewTextBoxColumn});
+            this.tblRentalInfo.DataSource = this.tblmovieRentalInfoBindingSource;
+            this.tblRentalInfo.Location = new System.Drawing.Point(35, 79);
             this.tblRentalInfo.Name = "tblRentalInfo";
             this.tblRentalInfo.Size = new System.Drawing.Size(932, 498);
             this.tblRentalInfo.TabIndex = 6;
             // 
+            // movieidDataGridViewTextBoxColumn
+            // 
+            this.movieidDataGridViewTextBoxColumn.DataPropertyName = "movie_id";
+            this.movieidDataGridViewTextBoxColumn.HeaderText = "movie_id";
+            this.movieidDataGridViewTextBoxColumn.Name = "movieidDataGridViewTextBoxColumn";
+            // 
+            // inforentTypeDataGridViewTextBoxColumn
+            // 
+            this.inforentTypeDataGridViewTextBoxColumn.DataPropertyName = "info_rentType";
+            this.inforentTypeDataGridViewTextBoxColumn.HeaderText = "info_rentType";
+            this.inforentTypeDataGridViewTextBoxColumn.Name = "inforentTypeDataGridViewTextBoxColumn";
+            // 
+            // inforentDaysDataGridViewTextBoxColumn
+            // 
+            this.inforentDaysDataGridViewTextBoxColumn.DataPropertyName = "info_rentDays";
+            this.inforentDaysDataGridViewTextBoxColumn.HeaderText = "info_rentDays";
+            this.inforentDaysDataGridViewTextBoxColumn.Name = "inforentDaysDataGridViewTextBoxColumn";
+            // 
+            // inforentFeeDataGridViewTextBoxColumn
+            // 
+            this.inforentFeeDataGridViewTextBoxColumn.DataPropertyName = "info_rentFee";
+            this.inforentFeeDataGridViewTextBoxColumn.HeaderText = "info_rentFee";
+            this.inforentFeeDataGridViewTextBoxColumn.Name = "inforentFeeDataGridViewTextBoxColumn";
+            // 
+            // infopenaltyFeeDataGridViewTextBoxColumn
+            // 
+            this.infopenaltyFeeDataGridViewTextBoxColumn.DataPropertyName = "info_penaltyFee";
+            this.infopenaltyFeeDataGridViewTextBoxColumn.HeaderText = "info_penaltyFee";
+            this.infopenaltyFeeDataGridViewTextBoxColumn.Name = "infopenaltyFeeDataGridViewTextBoxColumn";
+            // 
+            // infostatusDataGridViewTextBoxColumn
+            // 
+            this.infostatusDataGridViewTextBoxColumn.DataPropertyName = "info_status";
+            this.infostatusDataGridViewTextBoxColumn.HeaderText = "info_status";
+            this.infostatusDataGridViewTextBoxColumn.Name = "infostatusDataGridViewTextBoxColumn";
+            // 
+            // tblmovieRentalInfoBindingSource
+            // 
+            this.tblmovieRentalInfoBindingSource.DataMember = "tbl_movieRentalInfo";
+            this.tblmovieRentalInfoBindingSource.DataSource = this.db_videoRentalDataSet6;
+            // 
+            // db_videoRentalDataSet6
+            // 
+            this.db_videoRentalDataSet6.DataSetName = "db_videoRentalDataSet6";
+            this.db_videoRentalDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // topNavi
             // 
             this.topNavi.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.topNavi.BindingSource = this.tblmovieRentalInfoBindingSource;
             this.topNavi.CountItem = this.bindingNavigatorCountItem;
             this.topNavi.DeleteItem = this.bindingNavigatorDeleteItem;
             this.topNavi.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -200,6 +267,10 @@
             this.txtSearch.Size = new System.Drawing.Size(315, 26);
             this.txtSearch.TabIndex = 7;
             // 
+            // tbl_movieRentalInfoTableAdapter
+            // 
+            this.tbl_movieRentalInfoTableAdapter.ClearBeforeFill = true;
+            // 
             // frmRentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,7 +284,10 @@
             this.Name = "frmRentInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rental Info";
+            this.Load += new System.EventHandler(this.frmRentInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tblRentalInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblmovieRentalInfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_videoRentalDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.topNavi)).EndInit();
             this.topNavi.ResumeLayout(false);
             this.topNavi.PerformLayout();
@@ -240,5 +314,14 @@
         private System.Windows.Forms.StatusStrip statBar;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
+        private db_videoRentalDataSet6 db_videoRentalDataSet6;
+        private System.Windows.Forms.BindingSource tblmovieRentalInfoBindingSource;
+        private db_videoRentalDataSet6TableAdapters.tbl_movieRentalInfoTableAdapter tbl_movieRentalInfoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn movieidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inforentTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inforentDaysDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inforentFeeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn infopenaltyFeeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn infostatusDataGridViewTextBoxColumn;
     }
 }

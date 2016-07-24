@@ -22,5 +22,12 @@ namespace VideoRentalSystem
             frmAddMovieRentalInfo info = new frmAddMovieRentalInfo();
             info.Show();
         }
+
+        private void frmRentInfo_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'db_videoRentalDataSet6.tbl_movieRentalInfo' table. You can move, or remove it, as needed.
+            this.tbl_movieRentalInfoTableAdapter.Fill(this.db_videoRentalDataSet6.tbl_movieRentalInfo);
+
+        }
     }
 }

@@ -62,6 +62,36 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_videoRentalDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="db_videoRentalDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_videoRentalDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_videoRentalDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_videoRentalDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_videoRentalDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_videoRentalDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_videoRentalDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_videoRentalDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_videoRentalDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_videoRentalDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_videoRentalDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_videoRentalDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +233,72 @@
     </None>
     <None Include="db_videoRentalDataSet1.xss">
       <DependentUpon>db_videoRentalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="db_videoRentalDataSet2.xsc">
+      <DependentUpon>db_videoRentalDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="db_videoRentalDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_videoRentalDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_videoRentalDataSet2.xss">
+      <DependentUpon>db_videoRentalDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="db_videoRentalDataSet3.xsc">
+      <DependentUpon>db_videoRentalDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="db_videoRentalDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_videoRentalDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_videoRentalDataSet3.xss">
+      <DependentUpon>db_videoRentalDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="db_videoRentalDataSet4.xsc">
+      <DependentUpon>db_videoRentalDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="db_videoRentalDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_videoRentalDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_videoRentalDataSet4.xss">
+      <DependentUpon>db_videoRentalDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="db_videoRentalDataSet5.xsc">
+      <DependentUpon>db_videoRentalDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="db_videoRentalDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_videoRentalDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_videoRentalDataSet5.xss">
+      <DependentUpon>db_videoRentalDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="db_videoRentalDataSet6.xsc">
+      <DependentUpon>db_videoRentalDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="db_videoRentalDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_videoRentalDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_videoRentalDataSet6.xss">
+      <DependentUpon>db_videoRentalDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="db_videoRentalDataSet7.xsc">
+      <DependentUpon>db_videoRentalDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="db_videoRentalDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_videoRentalDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_videoRentalDataSet7.xss">
+      <DependentUpon>db_videoRentalDataSet7.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

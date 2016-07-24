@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,8 +32,13 @@ namespace VideoRentalSystem
             movie.Rating = Convert.ToInt32(txtRatings.Text);
             movie.Cast = txtCast.Text;
             movie.Year_Release = comboYear.Text;
+            movie.ImgPath = txtImgPath.Text;
             movie.generateID();
-            movie.insert();
+            //movie.insert();
+            movie.spTest("Insert");
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
+            File.Copy(open.FileName, Path.Combine(directory, fileName));
             MessageBox.Show(movie.Movie_ID + " Saved...");
             this.Close();
 
@@ -76,5 +82,29 @@ namespace VideoRentalSystem
         {
 
         }
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            open = new OpenFileDialog();
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap bit = new Bitmap(open.FileName);
+                picBoxMovie.Image = bit;
+                var imagestudent = picBoxMovie.Image;
+                this.fileName = Path.GetFileNameWithoutExtension(open.FileName) +
+                                    Path.GetExtension(open.FileName);
+                txtImgPath.Text = Path.Combine(directory, fileName);
+
+
+                 
+
+                //File.Copy(open.FileName, Path.Combine(directory, fileName));
+            }
+        }
+        private string directory = "movieThumbnails";
+        private string fileName;
+        private OpenFileDialog open;
     }
 }

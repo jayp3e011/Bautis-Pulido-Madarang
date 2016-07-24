@@ -70,13 +70,16 @@ namespace VideoRentalSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmRent rent = new frmRent();
+            frmRentMovie rent = new frmRentMovie();
             rent.Show();
+           
         }
 
         private void btnRentInfo_Click(object sender, EventArgs e)
         {
-            frmRentInfo info = new frmRentInfo();
+            //frmRentInfo info = new frmRentInfo();
+            //info.Show();
+            frmAddMovieRentalInfo info = new frmAddMovieRentalInfo();
             info.Show();
         }
     }

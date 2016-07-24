@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace VideoRentalSystem
 {
@@ -79,6 +83,27 @@ namespace VideoRentalSystem
             connectDB conn = new connectDB();
             conn.connect();
             conn.query(sql);
+        }
+        public void spTest(string statementType)
+        {
+
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["videoRental"].ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("rentInfoQuery", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@movie_id", this.movieID));
+                    cmd.Parameters.Add(new SqlParameter("@info_rentType", this.rentType));
+                    cmd.Parameters.Add(new SqlParameter("@info_rentDays", this.noOfDays));
+                    cmd.Parameters.Add(new SqlParameter("@info_rentFee", this.rentFee));
+                    cmd.Parameters.Add(new SqlParameter("@info_penaltyFee", this.penaltyFee));
+                    cmd.Parameters.Add(new SqlParameter("@StatementType", statementType));
+                    con.Open();
+                    MessageBox.Show(cmd.ExecuteNonQuery().ToString());
+
+                }
+
+            }
         }
     }
 }
