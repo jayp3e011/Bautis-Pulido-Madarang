@@ -58,13 +58,19 @@ namespace VideoRentalSystem
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.moviesView.Rows[e.RowIndex];
-
-                txtMovieID.Text = row.Cells[0].Value.ToString();
-                Movie img = new Movie();
-                img.Movie_ID = row.Cells[0].Value.ToString();
-                imgRentMoviePoster.Image = Image.FromFile(@img.getMovieImg());
+                string id = row.Cells[0].Value.ToString();
+                txtMovieID.Text = id;
 
             }
+        }
+
+        private void txtMovieID_TextChanged(object sender, EventArgs e)
+        {
+            Movie img = new Movie();
+            img.Movie_ID = txtMovieID.Text;
+            string imgPath = img.getMovieImg();
+            MessageBox.Show(imgPath);
+            imgRentMoviePoster.Image = Image.FromFile(@imgPath);
         }
     }
 }

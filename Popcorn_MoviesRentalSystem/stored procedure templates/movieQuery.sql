@@ -69,4 +69,8 @@ BEGIN
 		BEGIN
 			SELECT movie_image FROM dbo.tbl_movies WHERE movie_id = @movie_id
 		END
+	IF @StatementType = 'GetMovieINFO'
+		BEGIN
+			SELECT movie_title, movie_genre, movie_yearReleased, movie_image FROM dbo.tbl_movies WHERE movie_id = @movie_id
+		END
 END

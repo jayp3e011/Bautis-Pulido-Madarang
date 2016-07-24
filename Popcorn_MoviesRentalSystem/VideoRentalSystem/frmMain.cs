@@ -77,10 +77,10 @@ namespace VideoRentalSystem
 
         private void btnRentInfo_Click(object sender, EventArgs e)
         {
-            //frmRentInfo info = new frmRentInfo();
-            //info.Show();
-            frmAddMovieRentalInfo info = new frmAddMovieRentalInfo();
+            frmRentInfo info = new frmRentInfo();
             info.Show();
+            //frmAddMovieRentalInfo info = new frmAddMovieRentalInfo();
+            //info.Show();
         }
     }
 }

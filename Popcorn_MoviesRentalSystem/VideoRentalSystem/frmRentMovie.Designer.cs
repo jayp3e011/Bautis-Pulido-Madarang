@@ -49,12 +49,6 @@
             this.tblcustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.db_videoRentalDataSet = new VideoRentalSystem.db_videoRentalDataSet();
             this.moviesView = new System.Windows.Forms.DataGridView();
-            this.movieidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inforentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inforentDaysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inforentFeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.infopenaltyFeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.infostatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblmovieRentalInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.db_videoRentalDataSet2 = new VideoRentalSystem.db_videoRentalDataSet2();
             this.txtDateBorrowed = new System.Windows.Forms.DateTimePicker();
@@ -63,6 +57,12 @@
             this.db_videoRentalDataSet1 = new VideoRentalSystem.db_videoRentalDataSet1();
             this.dbvideoRentalDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbl_movieRentalInfoTableAdapter = new VideoRentalSystem.db_videoRentalDataSet2TableAdapters.tbl_movieRentalInfoTableAdapter();
+            this.movieidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inforentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inforentDaysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inforentFeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.infopenaltyFeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.infostatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customeridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerfirstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerlastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,11 +85,13 @@
             // 
             // txtMovieID
             // 
+            this.txtMovieID.Enabled = false;
             this.txtMovieID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMovieID.Location = new System.Drawing.Point(25, 37);
             this.txtMovieID.Name = "txtMovieID";
             this.txtMovieID.Size = new System.Drawing.Size(278, 26);
-            this.txtMovieID.TabIndex = 0;
+            this.txtMovieID.TabIndex = 6;
+            this.txtMovieID.TextChanged += new System.EventHandler(this.txtMovieID_TextChanged);
             // 
             // lblMovieID
             // 
@@ -104,7 +106,7 @@
             // txtRenaltFee
             // 
             this.txtRenaltFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRenaltFee.Location = new System.Drawing.Point(27, 582);
+            this.txtRenaltFee.Location = new System.Drawing.Point(26, 471);
             this.txtRenaltFee.Name = "txtRenaltFee";
             this.txtRenaltFee.Size = new System.Drawing.Size(276, 26);
             this.txtRenaltFee.TabIndex = 4;
@@ -112,16 +114,16 @@
             // txtPenaltyFee
             // 
             this.txtPenaltyFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPenaltyFee.Location = new System.Drawing.Point(27, 640);
+            this.txtPenaltyFee.Location = new System.Drawing.Point(26, 529);
             this.txtPenaltyFee.Name = "txtPenaltyFee";
             this.txtPenaltyFee.Size = new System.Drawing.Size(276, 26);
-            this.txtPenaltyFee.TabIndex = 6;
+            this.txtPenaltyFee.TabIndex = 5;
             // 
             // lblRenaltFee
             // 
             this.lblRenaltFee.AutoSize = true;
             this.lblRenaltFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRenaltFee.Location = new System.Drawing.Point(23, 558);
+            this.lblRenaltFee.Location = new System.Drawing.Point(22, 447);
             this.lblRenaltFee.Name = "lblRenaltFee";
             this.lblRenaltFee.Size = new System.Drawing.Size(88, 20);
             this.lblRenaltFee.TabIndex = 16;
@@ -130,7 +132,7 @@
             // txtDays
             // 
             this.txtDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDays.Location = new System.Drawing.Point(27, 528);
+            this.txtDays.Location = new System.Drawing.Point(26, 417);
             this.txtDays.Name = "txtDays";
             this.txtDays.Size = new System.Drawing.Size(276, 26);
             this.txtDays.TabIndex = 3;
@@ -139,7 +141,7 @@
             // 
             this.lblDateReturned.AutoSize = true;
             this.lblDateReturned.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateReturned.Location = new System.Drawing.Point(23, 450);
+            this.lblDateReturned.Location = new System.Drawing.Point(22, 339);
             this.lblDateReturned.Name = "lblDateReturned";
             this.lblDateReturned.Size = new System.Drawing.Size(115, 20);
             this.lblDateReturned.TabIndex = 17;
@@ -149,7 +151,7 @@
             // 
             this.lblDays.AutoSize = true;
             this.lblDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDays.Location = new System.Drawing.Point(22, 504);
+            this.lblDays.Location = new System.Drawing.Point(21, 393);
             this.lblDays.Name = "lblDays";
             this.lblDays.Size = new System.Drawing.Size(125, 20);
             this.lblDays.TabIndex = 19;
@@ -159,7 +161,8 @@
             // 
             this.imgRentMoviePoster.Location = new System.Drawing.Point(25, 69);
             this.imgRentMoviePoster.Name = "imgRentMoviePoster";
-            this.imgRentMoviePoster.Size = new System.Drawing.Size(278, 264);
+            this.imgRentMoviePoster.Size = new System.Drawing.Size(278, 160);
+            this.imgRentMoviePoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgRentMoviePoster.TabIndex = 26;
             this.imgRentMoviePoster.TabStop = false;
             // 
@@ -168,11 +171,11 @@
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(190, 695);
+            this.btnSave.Location = new System.Drawing.Point(189, 584);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(113, 34);
             this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "    Save";
+            this.btnSave.Text = "    Rent";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -180,7 +183,7 @@
             // 
             this.lblDateBorrowed.AutoSize = true;
             this.lblDateBorrowed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateBorrowed.Location = new System.Drawing.Point(22, 396);
+            this.lblDateBorrowed.Location = new System.Drawing.Point(21, 285);
             this.lblDateBorrowed.Name = "lblDateBorrowed";
             this.lblDateBorrowed.Size = new System.Drawing.Size(116, 20);
             this.lblDateBorrowed.TabIndex = 17;
@@ -190,7 +193,7 @@
             // 
             this.lblCostumerID.AutoSize = true;
             this.lblCostumerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCostumerID.Location = new System.Drawing.Point(22, 342);
+            this.lblCostumerID.Location = new System.Drawing.Point(22, 232);
             this.lblCostumerID.Name = "lblCostumerID";
             this.lblCostumerID.Size = new System.Drawing.Size(99, 20);
             this.lblCostumerID.TabIndex = 24;
@@ -198,8 +201,9 @@
             // 
             // txtCostumerID
             // 
+            this.txtCostumerID.Enabled = false;
             this.txtCostumerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCostumerID.Location = new System.Drawing.Point(26, 366);
+            this.txtCostumerID.Location = new System.Drawing.Point(25, 255);
             this.txtCostumerID.Name = "txtCostumerID";
             this.txtCostumerID.Size = new System.Drawing.Size(277, 26);
             this.txtCostumerID.TabIndex = 0;
@@ -208,7 +212,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(27, 612);
+            this.radioButton1.Location = new System.Drawing.Point(26, 501);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(111, 24);
             this.radioButton1.TabIndex = 5;
@@ -221,7 +225,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(25, 695);
+            this.btnCancel.Location = new System.Drawing.Point(24, 584);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(113, 34);
             this.btnCancel.TabIndex = 27;
@@ -246,8 +250,9 @@
             this.customerView.DataSource = this.tblcustomerBindingSource;
             this.customerView.Location = new System.Drawing.Point(354, 69);
             this.customerView.Name = "customerView";
-            this.customerView.Size = new System.Drawing.Size(594, 293);
+            this.customerView.Size = new System.Drawing.Size(604, 236);
             this.customerView.TabIndex = 28;
+            this.customerView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerView_CellContentClick);
             this.customerView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerView_CellContentClick);
             // 
             // tblcustomerBindingSource
@@ -272,48 +277,12 @@
             this.infopenaltyFeeDataGridViewTextBoxColumn,
             this.infostatusDataGridViewTextBoxColumn});
             this.moviesView.DataSource = this.tblmovieRentalInfoBindingSource;
-            this.moviesView.Location = new System.Drawing.Point(354, 420);
+            this.moviesView.Location = new System.Drawing.Point(354, 362);
             this.moviesView.Name = "moviesView";
-            this.moviesView.Size = new System.Drawing.Size(594, 293);
+            this.moviesView.Size = new System.Drawing.Size(604, 256);
             this.moviesView.TabIndex = 29;
+            this.moviesView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.moviesView_CellContentClick);
             this.moviesView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.moviesView_CellContentClick);
-            // 
-            // movieidDataGridViewTextBoxColumn
-            // 
-            this.movieidDataGridViewTextBoxColumn.DataPropertyName = "movie_id";
-            this.movieidDataGridViewTextBoxColumn.HeaderText = "Movie ID";
-            this.movieidDataGridViewTextBoxColumn.Name = "movieidDataGridViewTextBoxColumn";
-            // 
-            // inforentTypeDataGridViewTextBoxColumn
-            // 
-            this.inforentTypeDataGridViewTextBoxColumn.DataPropertyName = "info_rentType";
-            this.inforentTypeDataGridViewTextBoxColumn.HeaderText = "Rent Type";
-            this.inforentTypeDataGridViewTextBoxColumn.Name = "inforentTypeDataGridViewTextBoxColumn";
-            // 
-            // inforentDaysDataGridViewTextBoxColumn
-            // 
-            this.inforentDaysDataGridViewTextBoxColumn.DataPropertyName = "info_rentDays";
-            this.inforentDaysDataGridViewTextBoxColumn.HeaderText = "Rent Days";
-            this.inforentDaysDataGridViewTextBoxColumn.Name = "inforentDaysDataGridViewTextBoxColumn";
-            this.inforentDaysDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // inforentFeeDataGridViewTextBoxColumn
-            // 
-            this.inforentFeeDataGridViewTextBoxColumn.DataPropertyName = "info_rentFee";
-            this.inforentFeeDataGridViewTextBoxColumn.HeaderText = "Rent Fee";
-            this.inforentFeeDataGridViewTextBoxColumn.Name = "inforentFeeDataGridViewTextBoxColumn";
-            // 
-            // infopenaltyFeeDataGridViewTextBoxColumn
-            // 
-            this.infopenaltyFeeDataGridViewTextBoxColumn.DataPropertyName = "info_penaltyFee";
-            this.infopenaltyFeeDataGridViewTextBoxColumn.HeaderText = "Penalty Fee";
-            this.infopenaltyFeeDataGridViewTextBoxColumn.Name = "infopenaltyFeeDataGridViewTextBoxColumn";
-            // 
-            // infostatusDataGridViewTextBoxColumn
-            // 
-            this.infostatusDataGridViewTextBoxColumn.DataPropertyName = "info_status";
-            this.infostatusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.infostatusDataGridViewTextBoxColumn.Name = "infostatusDataGridViewTextBoxColumn";
             // 
             // tblmovieRentalInfoBindingSource
             // 
@@ -328,18 +297,18 @@
             // txtDateBorrowed
             // 
             this.txtDateBorrowed.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDateBorrowed.Location = new System.Drawing.Point(25, 420);
+            this.txtDateBorrowed.Location = new System.Drawing.Point(24, 309);
             this.txtDateBorrowed.Name = "txtDateBorrowed";
             this.txtDateBorrowed.Size = new System.Drawing.Size(278, 20);
-            this.txtDateBorrowed.TabIndex = 30;
+            this.txtDateBorrowed.TabIndex = 1;
             // 
             // txtDateReturned
             // 
             this.txtDateReturned.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDateReturned.Location = new System.Drawing.Point(25, 473);
+            this.txtDateReturned.Location = new System.Drawing.Point(24, 362);
             this.txtDateReturned.Name = "txtDateReturned";
             this.txtDateReturned.Size = new System.Drawing.Size(278, 20);
-            this.txtDateReturned.TabIndex = 31;
+            this.txtDateReturned.TabIndex = 2;
             // 
             // tbl_customerTableAdapter
             // 
@@ -359,42 +328,91 @@
             // 
             this.tbl_movieRentalInfoTableAdapter.ClearBeforeFill = true;
             // 
+            // movieidDataGridViewTextBoxColumn
+            // 
+            this.movieidDataGridViewTextBoxColumn.DataPropertyName = "movie_id";
+            this.movieidDataGridViewTextBoxColumn.HeaderText = "Movie ID";
+            this.movieidDataGridViewTextBoxColumn.Name = "movieidDataGridViewTextBoxColumn";
+            this.movieidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // inforentTypeDataGridViewTextBoxColumn
+            // 
+            this.inforentTypeDataGridViewTextBoxColumn.DataPropertyName = "info_rentType";
+            this.inforentTypeDataGridViewTextBoxColumn.HeaderText = "Rent Type";
+            this.inforentTypeDataGridViewTextBoxColumn.Name = "inforentTypeDataGridViewTextBoxColumn";
+            this.inforentTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // inforentDaysDataGridViewTextBoxColumn
+            // 
+            this.inforentDaysDataGridViewTextBoxColumn.DataPropertyName = "info_rentDays";
+            this.inforentDaysDataGridViewTextBoxColumn.HeaderText = "Rent Days";
+            this.inforentDaysDataGridViewTextBoxColumn.Name = "inforentDaysDataGridViewTextBoxColumn";
+            this.inforentDaysDataGridViewTextBoxColumn.ReadOnly = true;
+            this.inforentDaysDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // inforentFeeDataGridViewTextBoxColumn
+            // 
+            this.inforentFeeDataGridViewTextBoxColumn.DataPropertyName = "info_rentFee";
+            this.inforentFeeDataGridViewTextBoxColumn.HeaderText = "Rent Fee";
+            this.inforentFeeDataGridViewTextBoxColumn.Name = "inforentFeeDataGridViewTextBoxColumn";
+            this.inforentFeeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // infopenaltyFeeDataGridViewTextBoxColumn
+            // 
+            this.infopenaltyFeeDataGridViewTextBoxColumn.DataPropertyName = "info_penaltyFee";
+            this.infopenaltyFeeDataGridViewTextBoxColumn.HeaderText = "Penalty Fee";
+            this.infopenaltyFeeDataGridViewTextBoxColumn.Name = "infopenaltyFeeDataGridViewTextBoxColumn";
+            this.infopenaltyFeeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // infostatusDataGridViewTextBoxColumn
+            // 
+            this.infostatusDataGridViewTextBoxColumn.DataPropertyName = "info_status";
+            this.infostatusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.infostatusDataGridViewTextBoxColumn.Name = "infostatusDataGridViewTextBoxColumn";
+            this.infostatusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // customeridDataGridViewTextBoxColumn
             // 
             this.customeridDataGridViewTextBoxColumn.DataPropertyName = "customer_id";
             this.customeridDataGridViewTextBoxColumn.HeaderText = "Custumer ID";
             this.customeridDataGridViewTextBoxColumn.Name = "customeridDataGridViewTextBoxColumn";
+            this.customeridDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customerfirstNameDataGridViewTextBoxColumn
             // 
             this.customerfirstNameDataGridViewTextBoxColumn.DataPropertyName = "customer_firstName";
             this.customerfirstNameDataGridViewTextBoxColumn.HeaderText = "Firstname";
             this.customerfirstNameDataGridViewTextBoxColumn.Name = "customerfirstNameDataGridViewTextBoxColumn";
+            this.customerfirstNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customerlastNameDataGridViewTextBoxColumn
             // 
             this.customerlastNameDataGridViewTextBoxColumn.DataPropertyName = "customer_lastName";
             this.customerlastNameDataGridViewTextBoxColumn.HeaderText = "Lastname";
             this.customerlastNameDataGridViewTextBoxColumn.Name = "customerlastNameDataGridViewTextBoxColumn";
+            this.customerlastNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customermiddleInitialDataGridViewTextBoxColumn
             // 
             this.customermiddleInitialDataGridViewTextBoxColumn.DataPropertyName = "customer_middleInitial";
             this.customermiddleInitialDataGridViewTextBoxColumn.HeaderText = "Middle Initial";
             this.customermiddleInitialDataGridViewTextBoxColumn.Name = "customermiddleInitialDataGridViewTextBoxColumn";
+            this.customermiddleInitialDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customeraddressDataGridViewTextBoxColumn
             // 
             this.customeraddressDataGridViewTextBoxColumn.DataPropertyName = "customer_address";
             this.customeraddressDataGridViewTextBoxColumn.HeaderText = "Address";
             this.customeraddressDataGridViewTextBoxColumn.Name = "customeraddressDataGridViewTextBoxColumn";
-            this.customeraddressDataGridViewTextBoxColumn.Width = 150;
+            this.customeraddressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customeraddressDataGridViewTextBoxColumn.Width = 161;
             // 
             // customeremailAddDataGridViewTextBoxColumn
             // 
             this.customeremailAddDataGridViewTextBoxColumn.DataPropertyName = "customer_emailAdd";
             this.customeremailAddDataGridViewTextBoxColumn.HeaderText = "customer_emailAdd";
             this.customeremailAddDataGridViewTextBoxColumn.Name = "customeremailAddDataGridViewTextBoxColumn";
+            this.customeremailAddDataGridViewTextBoxColumn.ReadOnly = true;
             this.customeremailAddDataGridViewTextBoxColumn.Visible = false;
             // 
             // customercontactNoDataGridViewTextBoxColumn
@@ -402,6 +420,7 @@
             this.customercontactNoDataGridViewTextBoxColumn.DataPropertyName = "customer_contactNo";
             this.customercontactNoDataGridViewTextBoxColumn.HeaderText = "customer_contactNo";
             this.customercontactNoDataGridViewTextBoxColumn.Name = "customercontactNoDataGridViewTextBoxColumn";
+            this.customercontactNoDataGridViewTextBoxColumn.ReadOnly = true;
             this.customercontactNoDataGridViewTextBoxColumn.Visible = false;
             // 
             // customerstatusDataGridViewTextBoxColumn
@@ -409,6 +428,7 @@
             this.customerstatusDataGridViewTextBoxColumn.DataPropertyName = "customer_status";
             this.customerstatusDataGridViewTextBoxColumn.HeaderText = "customer_status";
             this.customerstatusDataGridViewTextBoxColumn.Name = "customerstatusDataGridViewTextBoxColumn";
+            this.customerstatusDataGridViewTextBoxColumn.ReadOnly = true;
             this.customerstatusDataGridViewTextBoxColumn.Visible = false;
             // 
             // customerregisteredDateDataGridViewTextBoxColumn
@@ -416,20 +436,20 @@
             this.customerregisteredDateDataGridViewTextBoxColumn.DataPropertyName = "customer_registeredDate";
             this.customerregisteredDateDataGridViewTextBoxColumn.HeaderText = "customer_registeredDate";
             this.customerregisteredDateDataGridViewTextBoxColumn.Name = "customerregisteredDateDataGridViewTextBoxColumn";
+            this.customerregisteredDateDataGridViewTextBoxColumn.ReadOnly = true;
             this.customerregisteredDateDataGridViewTextBoxColumn.Visible = false;
             // 
             // frmRentMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 741);
+            this.ClientSize = new System.Drawing.Size(1004, 642);
             this.Controls.Add(this.txtDateReturned);
             this.Controls.Add(this.txtDateBorrowed);
             this.Controls.Add(this.moviesView);
             this.Controls.Add(this.customerView);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.imgRentMoviePoster);
             this.Controls.Add(this.txtCostumerID);
             this.Controls.Add(this.lblCostumerID);
             this.Controls.Add(this.txtMovieID);
@@ -442,6 +462,7 @@
             this.Controls.Add(this.lblDateReturned);
             this.Controls.Add(this.lblDays);
             this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.imgRentMoviePoster);
             this.Name = "frmRentMovie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rent Movie";

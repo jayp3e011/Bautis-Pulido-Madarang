@@ -44,6 +44,9 @@
             this.imgMoviePoster = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.moviesView = new System.Windows.Forms.DataGridView();
+            this.getMovieSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.db_videoRentalDataSet7 = new VideoRentalSystem.db_videoRentalDataSet7();
+            this.getMovieSetTableAdapter = new VideoRentalSystem.db_videoRentalDataSet7TableAdapters.GetMovieSetTableAdapter();
             this.movieidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.movietitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.moviegenreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,9 +55,6 @@
             this.moviecastsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.movieyearReleasedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.movieimageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.getMovieSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.db_videoRentalDataSet7 = new VideoRentalSystem.db_videoRentalDataSet7();
-            this.getMovieSetTableAdapter = new VideoRentalSystem.db_videoRentalDataSet7TableAdapters.GetMovieSetTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.imgMoviePoster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moviesView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getMovieSetBindingSource)).BeginInit();
@@ -206,58 +206,6 @@
             this.moviesView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.moviesView_CellContentClick);
             this.moviesView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.moviesView_CellContentClick);
             // 
-            // movieidDataGridViewTextBoxColumn
-            // 
-            this.movieidDataGridViewTextBoxColumn.DataPropertyName = "movie_id";
-            this.movieidDataGridViewTextBoxColumn.HeaderText = "Movie ID";
-            this.movieidDataGridViewTextBoxColumn.Name = "movieidDataGridViewTextBoxColumn";
-            // 
-            // movietitleDataGridViewTextBoxColumn
-            // 
-            this.movietitleDataGridViewTextBoxColumn.DataPropertyName = "movie_title";
-            this.movietitleDataGridViewTextBoxColumn.HeaderText = "Title";
-            this.movietitleDataGridViewTextBoxColumn.Name = "movietitleDataGridViewTextBoxColumn";
-            this.movietitleDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // moviegenreDataGridViewTextBoxColumn
-            // 
-            this.moviegenreDataGridViewTextBoxColumn.DataPropertyName = "movie_genre";
-            this.moviegenreDataGridViewTextBoxColumn.HeaderText = "Genre";
-            this.moviegenreDataGridViewTextBoxColumn.Name = "moviegenreDataGridViewTextBoxColumn";
-            // 
-            // movieratingDataGridViewTextBoxColumn
-            // 
-            this.movieratingDataGridViewTextBoxColumn.DataPropertyName = "movie_rating";
-            this.movieratingDataGridViewTextBoxColumn.HeaderText = "Rating";
-            this.movieratingDataGridViewTextBoxColumn.Name = "movieratingDataGridViewTextBoxColumn";
-            // 
-            // movielanguageDataGridViewTextBoxColumn
-            // 
-            this.movielanguageDataGridViewTextBoxColumn.DataPropertyName = "movie_language";
-            this.movielanguageDataGridViewTextBoxColumn.HeaderText = "Language";
-            this.movielanguageDataGridViewTextBoxColumn.Name = "movielanguageDataGridViewTextBoxColumn";
-            this.movielanguageDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // moviecastsDataGridViewTextBoxColumn
-            // 
-            this.moviecastsDataGridViewTextBoxColumn.DataPropertyName = "movie_casts";
-            this.moviecastsDataGridViewTextBoxColumn.HeaderText = "Casts";
-            this.moviecastsDataGridViewTextBoxColumn.Name = "moviecastsDataGridViewTextBoxColumn";
-            this.moviecastsDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // movieyearReleasedDataGridViewTextBoxColumn
-            // 
-            this.movieyearReleasedDataGridViewTextBoxColumn.DataPropertyName = "movie_yearReleased";
-            this.movieyearReleasedDataGridViewTextBoxColumn.HeaderText = "Year Released";
-            this.movieyearReleasedDataGridViewTextBoxColumn.Name = "movieyearReleasedDataGridViewTextBoxColumn";
-            // 
-            // movieimageDataGridViewTextBoxColumn
-            // 
-            this.movieimageDataGridViewTextBoxColumn.DataPropertyName = "movie_image";
-            this.movieimageDataGridViewTextBoxColumn.HeaderText = "Image";
-            this.movieimageDataGridViewTextBoxColumn.Name = "movieimageDataGridViewTextBoxColumn";
-            this.movieimageDataGridViewTextBoxColumn.Visible = false;
-            // 
             // getMovieSetBindingSource
             // 
             this.getMovieSetBindingSource.DataMember = "GetMovieSet";
@@ -271,6 +219,66 @@
             // getMovieSetTableAdapter
             // 
             this.getMovieSetTableAdapter.ClearBeforeFill = true;
+            // 
+            // movieidDataGridViewTextBoxColumn
+            // 
+            this.movieidDataGridViewTextBoxColumn.DataPropertyName = "movie_id";
+            this.movieidDataGridViewTextBoxColumn.HeaderText = "Movie ID";
+            this.movieidDataGridViewTextBoxColumn.Name = "movieidDataGridViewTextBoxColumn";
+            this.movieidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // movietitleDataGridViewTextBoxColumn
+            // 
+            this.movietitleDataGridViewTextBoxColumn.DataPropertyName = "movie_title";
+            this.movietitleDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.movietitleDataGridViewTextBoxColumn.Name = "movietitleDataGridViewTextBoxColumn";
+            this.movietitleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.movietitleDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // moviegenreDataGridViewTextBoxColumn
+            // 
+            this.moviegenreDataGridViewTextBoxColumn.DataPropertyName = "movie_genre";
+            this.moviegenreDataGridViewTextBoxColumn.HeaderText = "Genre";
+            this.moviegenreDataGridViewTextBoxColumn.Name = "moviegenreDataGridViewTextBoxColumn";
+            this.moviegenreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // movieratingDataGridViewTextBoxColumn
+            // 
+            this.movieratingDataGridViewTextBoxColumn.DataPropertyName = "movie_rating";
+            this.movieratingDataGridViewTextBoxColumn.HeaderText = "Rating";
+            this.movieratingDataGridViewTextBoxColumn.Name = "movieratingDataGridViewTextBoxColumn";
+            this.movieratingDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // movielanguageDataGridViewTextBoxColumn
+            // 
+            this.movielanguageDataGridViewTextBoxColumn.DataPropertyName = "movie_language";
+            this.movielanguageDataGridViewTextBoxColumn.HeaderText = "Language";
+            this.movielanguageDataGridViewTextBoxColumn.Name = "movielanguageDataGridViewTextBoxColumn";
+            this.movielanguageDataGridViewTextBoxColumn.ReadOnly = true;
+            this.movielanguageDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // moviecastsDataGridViewTextBoxColumn
+            // 
+            this.moviecastsDataGridViewTextBoxColumn.DataPropertyName = "movie_casts";
+            this.moviecastsDataGridViewTextBoxColumn.HeaderText = "Casts";
+            this.moviecastsDataGridViewTextBoxColumn.Name = "moviecastsDataGridViewTextBoxColumn";
+            this.moviecastsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.moviecastsDataGridViewTextBoxColumn.Width = 105;
+            // 
+            // movieyearReleasedDataGridViewTextBoxColumn
+            // 
+            this.movieyearReleasedDataGridViewTextBoxColumn.DataPropertyName = "movie_yearReleased";
+            this.movieyearReleasedDataGridViewTextBoxColumn.HeaderText = "Year Released";
+            this.movieyearReleasedDataGridViewTextBoxColumn.Name = "movieyearReleasedDataGridViewTextBoxColumn";
+            this.movieyearReleasedDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // movieimageDataGridViewTextBoxColumn
+            // 
+            this.movieimageDataGridViewTextBoxColumn.DataPropertyName = "movie_image";
+            this.movieimageDataGridViewTextBoxColumn.HeaderText = "Image";
+            this.movieimageDataGridViewTextBoxColumn.Name = "movieimageDataGridViewTextBoxColumn";
+            this.movieimageDataGridViewTextBoxColumn.ReadOnly = true;
+            this.movieimageDataGridViewTextBoxColumn.Visible = false;
             // 
             // frmAddMovieRentalInfo
             // 

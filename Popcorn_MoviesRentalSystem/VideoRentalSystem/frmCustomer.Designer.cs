@@ -246,24 +246,28 @@
             this.customeridDataGridViewTextBoxColumn.DataPropertyName = "customer_id";
             this.customeridDataGridViewTextBoxColumn.HeaderText = "ID";
             this.customeridDataGridViewTextBoxColumn.Name = "customeridDataGridViewTextBoxColumn";
+            this.customeridDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customerfirstNameDataGridViewTextBoxColumn
             // 
             this.customerfirstNameDataGridViewTextBoxColumn.DataPropertyName = "customer_firstName";
             this.customerfirstNameDataGridViewTextBoxColumn.HeaderText = "Firstname";
             this.customerfirstNameDataGridViewTextBoxColumn.Name = "customerfirstNameDataGridViewTextBoxColumn";
+            this.customerfirstNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customerlastNameDataGridViewTextBoxColumn
             // 
             this.customerlastNameDataGridViewTextBoxColumn.DataPropertyName = "customer_lastName";
             this.customerlastNameDataGridViewTextBoxColumn.HeaderText = "Lastname";
             this.customerlastNameDataGridViewTextBoxColumn.Name = "customerlastNameDataGridViewTextBoxColumn";
+            this.customerlastNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customermiddleInitialDataGridViewTextBoxColumn
             // 
             this.customermiddleInitialDataGridViewTextBoxColumn.DataPropertyName = "customer_middleInitial";
             this.customermiddleInitialDataGridViewTextBoxColumn.HeaderText = "MI";
             this.customermiddleInitialDataGridViewTextBoxColumn.Name = "customermiddleInitialDataGridViewTextBoxColumn";
+            this.customermiddleInitialDataGridViewTextBoxColumn.ReadOnly = true;
             this.customermiddleInitialDataGridViewTextBoxColumn.Width = 50;
             // 
             // customeraddressDataGridViewTextBoxColumn
@@ -271,12 +275,14 @@
             this.customeraddressDataGridViewTextBoxColumn.DataPropertyName = "customer_address";
             this.customeraddressDataGridViewTextBoxColumn.HeaderText = "Address";
             this.customeraddressDataGridViewTextBoxColumn.Name = "customeraddressDataGridViewTextBoxColumn";
+            this.customeraddressDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customeremailAddDataGridViewTextBoxColumn
             // 
             this.customeremailAddDataGridViewTextBoxColumn.DataPropertyName = "customer_emailAdd";
             this.customeremailAddDataGridViewTextBoxColumn.HeaderText = "Email";
             this.customeremailAddDataGridViewTextBoxColumn.Name = "customeremailAddDataGridViewTextBoxColumn";
+            this.customeremailAddDataGridViewTextBoxColumn.ReadOnly = true;
             this.customeremailAddDataGridViewTextBoxColumn.Width = 150;
             // 
             // customercontactNoDataGridViewTextBoxColumn
@@ -284,12 +290,14 @@
             this.customercontactNoDataGridViewTextBoxColumn.DataPropertyName = "customer_contactNo";
             this.customercontactNoDataGridViewTextBoxColumn.HeaderText = "Contact No.";
             this.customercontactNoDataGridViewTextBoxColumn.Name = "customercontactNoDataGridViewTextBoxColumn";
+            this.customercontactNoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customerstatusDataGridViewTextBoxColumn
             // 
             this.customerstatusDataGridViewTextBoxColumn.DataPropertyName = "customer_status";
             this.customerstatusDataGridViewTextBoxColumn.HeaderText = "Status";
             this.customerstatusDataGridViewTextBoxColumn.Name = "customerstatusDataGridViewTextBoxColumn";
+            this.customerstatusDataGridViewTextBoxColumn.ReadOnly = true;
             this.customerstatusDataGridViewTextBoxColumn.Width = 80;
             // 
             // customerregisteredDateDataGridViewTextBoxColumn
@@ -297,7 +305,8 @@
             this.customerregisteredDateDataGridViewTextBoxColumn.DataPropertyName = "customer_registeredDate";
             this.customerregisteredDateDataGridViewTextBoxColumn.HeaderText = "Registered Date";
             this.customerregisteredDateDataGridViewTextBoxColumn.Name = "customerregisteredDateDataGridViewTextBoxColumn";
-            this.customerregisteredDateDataGridViewTextBoxColumn.Width = 120;
+            this.customerregisteredDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerregisteredDateDataGridViewTextBoxColumn.Width = 109;
             // 
             // frmCustomer
             // 

@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -140,23 +142,57 @@ namespace VideoRentalSystem
         }
         public string getMovieImg()
         {
+            SqlDataReader reader;
             string path = "";
+            //MemoryStream ms=null;
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["videoRental"].ConnectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("rentInfoQuery", con))
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("movieQuery", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@movie_id", this.movieID));
                     cmd.Parameters.Add(new SqlParameter("@StatementType", "GetMovieImg"));
-                    con.Open();
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    path = reader["movie_image"].ToString();
-
-                    MessageBox.Show(cmd.ExecuteNonQuery().ToString());
-
+                    reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        path = reader["movie_image"].ToString();
+                        //Byte[] byteBLOBData = new Byte[0];
+                        //byteBLOBData = (Byte[])((byte[])reader["movie_image"]);
+                        //ms = new MemoryStream(byteBLOBData);
+                        //image2.Image = System.Drawing.Image.FromStream(ms);
+                        con.Close();
+                    }
                 }
             }
             return path;
+        }
+        public string[] getMovieInfo()
+        {
+            SqlDataReader reader;
+            //ArrayList valuesList = new ArrayList();
+            string[] info = new string[4];
+            //MemoryStream ms=null;
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["videoRental"].ConnectionString))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("movieQuery", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@movie_id", this.movieID));
+                    cmd.Parameters.Add(new SqlParameter("@StatementType", "GetMovieInfo"));
+                    reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        info[0] = reader["movie_title"].ToString();
+                        info[1] = reader["movie_genre"].ToString();
+                        info[2] = reader["movie_yearReleased"].ToString();
+                        info[3] = reader["movie_image"].ToString();
+                        con.Close();
+                    }
+                }
+            }
+            return info;
         }
     }
 }
