@@ -96,7 +96,8 @@ namespace VideoRentalSystem
             customer.Contact_No = txtContact.Text;
             customer.Status = "Active";
             customer.generateID();
-            customer.insert();
+            customer.spTest("Insert");
+            //customer.insert();
             MessageBox.Show(customer.CustomerID+"  Saved....");
             this.Close();
 

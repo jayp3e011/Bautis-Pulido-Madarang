@@ -43,10 +43,10 @@
             this.lblCast = new System.Windows.Forms.Label();
             this.comboYear = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBoxMovie = new System.Windows.Forms.PictureBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtImgPath = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -248,17 +248,17 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(113, 34);
             this.btnCancel.TabIndex = 10;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "   Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // pictureBox1
+            // picBoxMovie
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(25, 69);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(219, 264);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.picBoxMovie.Location = new System.Drawing.Point(25, 69);
+            this.picBoxMovie.Name = "picBoxMovie";
+            this.picBoxMovie.Size = new System.Drawing.Size(219, 264);
+            this.picBoxMovie.TabIndex = 9;
+            this.picBoxMovie.TabStop = false;
             // 
             // btnBrowse
             // 
@@ -269,6 +269,7 @@
             this.btnBrowse.TabIndex = 8;
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // txtImgPath
             // 
@@ -285,7 +286,7 @@
             this.ClientSize = new System.Drawing.Size(465, 429);
             this.Controls.Add(this.txtImgPath);
             this.Controls.Add(this.btnBrowse);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picBoxMovie);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.comboYear);
             this.Controls.Add(this.txtCast);
@@ -304,7 +305,7 @@
             this.Name = "frmAddMovie";
             this.Text = "Add Movie";
             this.Load += new System.EventHandler(this.frmAddMovie_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMovie)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,7 +327,7 @@
         private System.Windows.Forms.Label lblCast;
         private System.Windows.Forms.ComboBox comboYear;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBoxMovie;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.TextBox txtImgPath;
     }

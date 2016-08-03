@@ -60,7 +60,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(26, 319);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 16);
+            this.label1.Size = new System.Drawing.Size(117, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Copyright 2016";
             // 
@@ -72,7 +72,7 @@
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(179, 319);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 16);
+            this.label2.Size = new System.Drawing.Size(122, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Jaypee Bautista";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -128,6 +128,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSplash";
+            this.Load += new System.EventHandler(this.frmSplash_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

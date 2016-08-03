@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -125,6 +128,31 @@ namespace VideoRentalSystem
             connectDB conn = new connectDB();
             conn.connect();
             conn.query(sql);
+        }
+        public void spTest(string statementType)
+        {
+            
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["videoRental"].ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("customerQuery", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@customer_id", this.customerID));
+                    cmd.Parameters.Add(new SqlParameter("@customer_firstName", this.firstName));
+                    cmd.Parameters.Add(new SqlParameter("@customer_lastName", this.lastName));
+                    cmd.Parameters.Add(new SqlParameter("@customer_middleInitial", this.middleInitial));
+                    cmd.Parameters.Add(new SqlParameter("@customer_address", this.address));
+                    cmd.Parameters.Add(new SqlParameter("@customer_emailAdd", this.email));
+                    cmd.Parameters.Add(new SqlParameter("@customer_contactNo", this.contactNo));
+                    cmd.Parameters.Add(new SqlParameter("@customer_status", this.status));
+                    cmd.Parameters.Add(new SqlParameter("@customer_registeredDate", this.regDate));
+                    cmd.Parameters.Add(new SqlParameter("@StatementType", statementType));
+                    con.Open();
+                    MessageBox.Show(cmd.ExecuteNonQuery().ToString());
+                    
+                }
+
+            }
         }
     }
 }

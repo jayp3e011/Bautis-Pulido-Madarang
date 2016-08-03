@@ -36,7 +36,41 @@ namespace VideoRentalSystem
 
         private void frmRentMovie_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'db_videoRentalDataSet2.tbl_movieRentalInfo' table. You can move, or remove it, as needed.
+            this.tbl_movieRentalInfoTableAdapter.Fill(this.db_videoRentalDataSet2.tbl_movieRentalInfo);
+            // TODO: This line of code loads data into the 'db_videoRentalDataSet.tbl_customer' table. You can move, or remove it, as needed.
+            this.tbl_customerTableAdapter.Fill(this.db_videoRentalDataSet.tbl_customer);
 
+        }
+
+        private void customerView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex >= 0 && e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.customerView.Rows[e.RowIndex];
+
+                txtCostumerID.Text = row.Cells[0].Value.ToString();
+                
+            }
+        }
+        private void moviesView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex >= 0 && e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.moviesView.Rows[e.RowIndex];
+                string id = row.Cells[0].Value.ToString();
+                txtMovieID.Text = id;
+
+            }
+        }
+
+        private void txtMovieID_TextChanged(object sender, EventArgs e)
+        {
+            Movie img = new Movie();
+            img.Movie_ID = txtMovieID.Text;
+            string imgPath = img.getMovieImg();
+            MessageBox.Show(imgPath);
+            imgRentMoviePoster.Image = Image.FromFile(@imgPath);
         }
     }
 }

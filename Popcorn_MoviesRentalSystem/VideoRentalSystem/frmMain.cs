@@ -18,13 +18,17 @@ namespace VideoRentalSystem
         {
             Thread t = new Thread(new ThreadStart(splashStart));
             t.Start();
-            Thread.Sleep(5000);
+            Thread.Sleep(10000);
             InitializeComponent();
             t.Abort();
         }
         public void splashStart()
         {
             Application.Run(new frmSplash());
+        }
+        public void login()
+        {
+            Application.Run(new Login());
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -70,14 +74,17 @@ namespace VideoRentalSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmRent rent = new frmRent();
+            frmRentMovie rent = new frmRentMovie();
             rent.Show();
+           
         }
 
         private void btnRentInfo_Click(object sender, EventArgs e)
         {
             frmRentInfo info = new frmRentInfo();
             info.Show();
+            //frmAddMovieRentalInfo info = new frmAddMovieRentalInfo();
+            //info.Show();
         }
     }
 }
