@@ -48,6 +48,7 @@ G:\c#codes\Popcorn_MoviesRentalSystem\VideoRentalSystem\obj\SQLCONN\VideoRentalS
 G:\c#codes\Popcorn_MoviesRentalSystem\VideoRentalSystem\obj\SQLCONN\VideoRentalSystem.frmSplash.resources
 G:\c#codes\Popcorn_MoviesRentalSystem\VideoRentalSystem\obj\SQLCONN\VideoRentalSystem.Properties.Resources.resources
 G:\c#codes\Popcorn_MoviesRentalSystem\VideoRentalSystem\obj\SQLCONN\InterfaceStaff.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 H:\c#codes\Popcorn_MoviesRentalSystem\VideoRentalSystem\bin\SQLCONN\VideoRentalSystem.exe.config
 H:\c#codes\Popcorn_MoviesRentalSystem\VideoRentalSystem\obj\SQLCONN\VideoRentalSystem.exe
 H:\c#codes\Popcorn_MoviesRentalSystem\VideoRentalSystem\bin\SQLCONN\VideoRentalSystem.exe
@@ -84,3 +85,5 @@ C:\Users\Administrator\Desktop\c#codes\Popcorn_MoviesRentalSystem\VideoRentalSys
 C:\Users\Administrator\Desktop\c#codes\Popcorn_MoviesRentalSystem\VideoRentalSystem\obj\SQLCONN\InterfaceStaff.csproj.GenerateResource.Cache
 C:\Users\Administrator\Desktop\c#codes\Popcorn_MoviesRentalSystem\VideoRentalSystem\bin\SQLCONN\Validator.dll
 C:\Users\Administrator\Desktop\c#codes\Popcorn_MoviesRentalSystem\VideoRentalSystem\bin\SQLCONN\Validator.pdb
+=======
+>>>>>>> origin/master
